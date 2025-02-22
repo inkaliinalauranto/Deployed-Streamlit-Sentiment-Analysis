@@ -1,7 +1,7 @@
 import time
 
 # Alla olevissa funktiossa luodaan sisältöä HTML-koodipohjaisesti. Nämä 
-# ratkaisut on tehty  esimerkkejä mukaillen:
+# ratkaisut on tehty seuraavia esimerkkejä mukaillen:
 #
 # Kekre, S. 2021: 
 # https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/2
@@ -33,21 +33,20 @@ def html_title(text: str) -> str:
 # saatu dynaaminen sana ja emoji. Merkkijono sisältää myös tyyliluokan, joka
 # asetetaan divin luokaksi. Sen avulla diville saadaan animaatio. Tyyliluokka 
 # nimetään dynaamisesti hyödyntämällä aikaleimaa, jotta elementti renderöidään 
-# aina uudestaan, kun app.py-tiedoston käyttäjäsyöte lähetetään. Tämän 
-# aikaleimaa hyödyntävän dynaamisen nimeämisen logiikan muodostamisessa käytin 
-# apuna ChatGPT:tä."
+# aina uudestaan, kun käyttäjäsyöte lähetetään. Tämän aikaleimaa hyödyntävän 
+# dynaamisen nimeämisen logiikan muodostamisessa käytin apuna ChatGPT:tä.
 def html_result(result: str, emoji: str) -> str:
     # time-kirjaston time-metodi palauttaa ajonaikaisen UCT-ajan sekunteina.
     # (Lähde: https://www.tutorialspoint.com/python/time_time.htm.)
     # Koska tätä leimaa käytetään CSS-luokan nimeämisessä, muutetaan se 
     # ensin liukuluvusta merkkijonoksi. Sen jälkeen erotellaan leima kahteen 
-    # osaan pisteen kohdalta, koska kyseessä on liukuluku. Yhdistetään lopuksi 
-    # erotellut osat ilman pistettä tai muutakaan merkkiä. Näin vältytään 
-    # siltä, ettei CSS-luokannimeen tule vääränlaisia merkkejä, mutta luokan 
-    # nimi säilyy silti ainutkertaisena.
+    # osaan pisteen kohdalta, koska kyseessä oli alunperin liukuluku. 
+    # Yhdistetään lopuksi erotellut osat P-merkillä. Näin vältytään siltä, 
+    # ettei CSS-luokan nimeen tule vääränlaista merkkiä (.), mutta luokan nimi 
+    # säilyy edelleen ainutkertaisena.
     unique_id = "P".join(str(time.time()).split("."))
 
-    # Animaation tuottavan CSS-koodi on tehty seuraavan esimerkin mukaan:
+    # Animaation tuottava CSS-luokka on tehty seuraavan esimerkin mukaan:
     # https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m
     html_result_str = (f"""
     <style>

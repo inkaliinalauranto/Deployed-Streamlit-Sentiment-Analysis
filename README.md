@@ -1,6 +1,6 @@
-# Moduulin 3 bonustehtävä - Deployed Sentiment Analysis
+# Moduuli 3, bonustehtävä - Cloud-based Streamlit Frontend Deployment
 
-Tässä tehtävässä on tehty Streamlit-sovelluskehyksen avulla yksinkertainen sovellus, joka on otettu ja julkaistu Streamlitin pilvipalvelun kautta osoitteessa: __. Sovelluksessa hyödynnetään moduulissa 2 tehtyä tunneanalyysimallia, jonka avulla käyttäjän syötteestä analysoidaan sen tunnelma. Analysoitu tunnelma tuodaan käyttöliittymään Streamlitin toimintojen avulla:
+Tässä tehtävässä on Streamlit-sovelluskehyksen avulla toteutettu yksinkertainen sovellus, joka on otettu käyttöön ja [julkaistu](https://deployed-sentiment-analysis.streamlit.app/) Streamlitin Community Cloud -pilvipalvelun kautta. Sovelluksessa hyödynnetään moduulissa 2 tehtyä tunneanalyysimallia, jonka avulla käyttäjän syötteestä analysoidaan syötteen tunnelma. Analysoitu tunnelma tuodaan käyttöliittymään Streamlitin toimintojen avulla:
 
 ![user interface](images/ui.png)
 

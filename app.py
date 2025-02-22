@@ -27,8 +27,8 @@ if user_input:
     # https://www.w3schools.com/charsets/ref_emoji_smileys.asp
     emoji = "&#128528;"
 
-    emojis = ["&#128522;", "&#128528;", "&#128530;"]
     sentiments = ["positive", "neutral", "negative"]
+    emojis = ["&#128522;", "&#128528;", "&#128530;"]
 
     # Käydään sentiments-listan jokainen alkio läpi. Jos käyttäjäsyötteestä 
     # ennustettu tunne vastaa jotakin listan alkiota, haetaan 
