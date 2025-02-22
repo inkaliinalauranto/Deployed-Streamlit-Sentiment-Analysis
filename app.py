@@ -18,7 +18,8 @@ user_input = st.text_input(label="What are you currently thinking?",
 # sisään: 
 if user_input:
     # Ennustetaan käyttäjän syötteen tunne text_clf-muuttujassa olevan 
-    # koulutusmallin predict-metodia hyödyntämällä:
+    # koulutusmallin predict-metodia hyödyntämällä. Metodi palauttaa tuloksen 
+    # arrayna, jossa tässä tapauksessa on vain yksi alkio:
     result = text_clf.predict([user_input])[0]
     # Koska tulostekstin sisältö luodaan HTML-koodilla, käytetään UTF-8 
     # Emoji Faces -hymiöitä. Haluttujen hymiöiden HTML-viittaukset hain 
@@ -26,7 +27,7 @@ if user_input:
     # https://www.w3schools.com/charsets/ref_emoji_smileys.asp
     emoji = "&#128528;"
 
-    emojis = ["&#128522;", "&#128528;", "&#128528;"]
+    emojis = ["&#128522;", "&#128528;", "&#128530;"]
     sentiments = ["positive", "neutral", "negative"]
 
     # Käydään sentiments-listan jokainen alkio läpi. Jos käyttäjäsyötteestä 

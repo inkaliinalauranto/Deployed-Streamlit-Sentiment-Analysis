@@ -3,10 +3,10 @@ import time
 # Alla olevissa funktiossa luodaan sisältöä HTML-koodipohjaisesti. Nämä 
 # ratkaisut on tehty  esimerkkejä mukaillen:
 #
-# snehankekre 2021: 
+# Kekre, S. 2021: 
 # https://discuss.streamlit.io/t/passing-variable-containing-text-to-markdown/16069/2
 # 
-#y2ntfk8e 2023:
+# y2ntfk8e 2023:
 # https://discuss.streamlit.io/t/create-animation-for-messages-when-button-is-clicked/39610
 
 
@@ -45,7 +45,7 @@ def html_result(result: str, emoji: str) -> str:
     # erotellut osat ilman pistettä tai muutakaan merkkiä. Näin vältytään 
     # siltä, ettei CSS-luokannimeen tule vääränlaisia merkkejä, mutta luokan 
     # nimi säilyy silti ainutkertaisena.
-    unique_id = "".join(str(time.time()).split("."))
+    unique_id = "P".join(str(time.time()).split("."))
 
     # Animaation tuottavan CSS-koodi on tehty seuraavan esimerkin mukaan:
     # https://dev.to/tiaeastwood/super-simple-css-animation-for-fade-in-on-page-load-2p8m
